@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %} Filton | Guestbook {% endblock %}
+
+{% block naslov %} Guestbook! {% endblock %}
+
+{% block vsebina %}
+
+<link rel="stylesheet" href="/assets/css/guestbook.css">
+
+<div id="submit">
+<p> Please leave your message.</p>
+    <form method="post" action="/save">
+        <p>Your first name: <input name="name" placeholder="name"></p>
+        <p>Your last name: <input name="surname" placeholder="surname"></p>
+        <p>Your message: <input name="message" placeholder="please enter your message"></p>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+{% endblock %}

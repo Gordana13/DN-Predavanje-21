@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+    {% if sign_in %}
+
+        <h1>Welcome to the Filton Hotel website!</h1>
+
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/guestbook">Guestbook</a></li>
+            <li><a href="/messages">Messages</a></li>
+        </ul>
+
+        <h2>Hello {{ user.nickname() }}</h2>
+
+        <a id="logout" href="{{ logout_url }}">Logout</a>
+
+    {% else %}
+        <h1>Welcome to the Filton Hotel website!</h1>
+
+         <ul>
+             <li><a href="/">Home</a></li>
+         </ul>
+
+        <p>You are not logged in! Please log in:
+            <a href="{{ login_url }}">Log in</a>
+        </p>
+    {% endif %}
+
+</body>
+</html>

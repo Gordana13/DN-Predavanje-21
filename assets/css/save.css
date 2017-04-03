@@ -1,0 +1,17 @@
+body {
+    background-image: url("http://cdn.wallpapersafari.com/92/93/XqmQtG.jpg")
+}
+
+p {
+    text-align: center;
+    font-family: Georgia;
+}
+
+hr {
+    width: 32%;
+}
+
+#color {
+    font-size: 20px;
+    font-weight: bold;
+}

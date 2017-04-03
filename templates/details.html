@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %} Filton|Details {% endblock %}
+{% block naslov %} Details {% endblock %}
+{% block vsebina %}
+
+    {% if admin %}
+        <h2> {{ message.name }}</h2>
+
+        <p> <strong> Message created: </strong>{{ message.email }}, {{ message.name }} {{ message.surname }}  : {{ message.message }} <strong> at : </strong>[{{ message.date.strftime('%d-%b-%Y %H:%M')}}] </p>
+        <p> <a href="/details/{{ message.key.id() }}/edit">Edit</a></p>
+        <p> <a href="/details/{{ message.key.id() }}/delete">Delete</a></p>
+
+    {% else %}
+
+        <h2> {{ message.name }}</h2>
+        <p> <strong> Message created: </strong>{{ message.email }}, {{ message.name }} {{ message.surname }}  : {{ message.message }} <strong> at : </strong>[{{ message.date.strftime('%d-%b-%Y %H:%M')}}] </p>
+
+    {% endif %}
+{% endblock %}
